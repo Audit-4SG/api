@@ -1,0 +1,2727 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/c/ontologies/2023/2/Audit4SG#"
+     xml:base="http://www.semanticweb.org/c/ontologies/2023/2/Audit4SG"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:RelAIEO="http://www.ontology.audit4sg.org/RelAIEO#">
+    <owl:Ontology rdf:about="http://www.ontology.audit4sg.org/RelAIEO">
+        <dc:creator>Cheshta Arora</dc:creator>
+        <dc:creator>Debarun Sarkar</dc:creator>
+        <dc:license>GNU General Purpose License v3</dc:license>
+        <dc:title>Relational AI Ethics Ontology (RelAIEO)</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#description -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#description"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#provocation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#provocation"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#references -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#references"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ateontology.protect.linkeddata.es/def/ateo#studyOf -->
+
+    <owl:ObjectProperty rdf:about="http://ateontology.protect.linkeddata.es/def/ateo#studyOf">
+        <rdfs:domain rdf:resource="http://ateontology.protect.linkeddata.es/def/ateo#approach"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ai_system"/>
+        <rdfs:label>ToAudit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#Ask -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#Ask">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethico_political_care"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#question"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#BasedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#BasedOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://ateontology.protect.linkeddata.es/def/ateo#ethical_assessment"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#CriticalOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#CriticalOf">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_ethic"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#CutAcross -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#CutAcross">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#consumer"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#equality_end_user"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#domain"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ExperimentWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ExperimentWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_approach"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#method"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#FocusOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#FocusOn">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_approach"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#matter_of_concern"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#GiveFunding -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#GiveFunding">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#funder"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#Has -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#Has">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ai_system"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#consequence"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#HasActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#HasActor">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#Has"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ai4sg"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#HasAffordance -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#HasAffordance">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#Has"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#technology"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#affordance"/>
+        <rdfs:label>HasAffordances</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#HasApproach -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#HasApproach">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#Has"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_ethic"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_approach"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#HasDimension -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#HasDimension">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#Has"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#socio_technical_system"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#HasDomain -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#HasDomain">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#Has"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ai4sg"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#domain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#HasExpectation -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#HasExpectation">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#Has"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ai_system"/>
+        <rdfs:range rdf:resource="http://aexpectontology.protect.linkeddata.es/def/aexp#expectation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#HasImpact -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#HasImpact">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:range rdf:resource="http://ateontology.protect.linkeddata.es/def/ateo#approach"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#HasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#HasType">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#Has"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#developer"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#equality_consumer"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#funder"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ImprovedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ImprovedBy">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#non_human_autonomy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#Include -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#Include">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#techno-human_ecology"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#InfluencedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#InfluencedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#IsA -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#IsA">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#technology"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#socio_technical_system"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#IsAbout -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#IsAbout">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://ateontology.protect.linkeddata.es/def/ateo#ethical_assessment"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#human_machine_relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#Manipulate -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#Manipulate">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#affordance"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#rhetoric"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethics_manipulation"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#human_action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#Redefine -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#Redefine">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_approach"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#StudyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#StudyOf">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_approach"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#socio_technical_system"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#UsedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#UsedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ai_system"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ai4sg"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#Uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontology.audit4sg.org/RelAIEO#Uses">
+        <rdfs:domain rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ai_system"/>
+        <rdfs:range rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://aexpectontology.protect.linkeddata.es/def/aexp#aim_expected -->
+
+    <owl:Class rdf:about="http://aexpectontology.protect.linkeddata.es/def/aexp#aim_expected">
+        <rdfs:subClassOf rdf:resource="http://aexpectontology.protect.linkeddata.es/def/aexp#expectation"/>
+        <rdfs:provocation>Is the expected aim relevant for the end user? 
+What kind of presumptions concerning the user does the expected aim make?
+Do those presumptions align with the user?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://aexpectontology.protect.linkeddata.es/def/aexp#audience_expected -->
+
+    <owl:Class rdf:about="http://aexpectontology.protect.linkeddata.es/def/aexp#audience_expected">
+        <rdfs:subClassOf rdf:resource="http://aexpectontology.protect.linkeddata.es/def/aexp#expectation"/>
+        <rdfs:provocation>Who all are included in the targetted audience? 
+Who is excluded? 
+Is that exclusion discriminatory?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://aexpectontology.protect.linkeddata.es/def/aexp#expectation -->
+
+    <owl:Class rdf:about="http://aexpectontology.protect.linkeddata.es/def/aexp#expectation">
+        <rdfs:provocation>What kind of expectations does the developer, the funder or the user have from the AI system? 
+Are these expectations alighned with each other?
+Should they be aligned with each other?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://aexpectontology.protect.linkeddata.es/def/aexp#performance_in_societal_practices -->
+
+    <owl:Class rdf:about="http://aexpectontology.protect.linkeddata.es/def/aexp#performance_in_societal_practices">
+        <rdfs:subClassOf rdf:resource="http://aexpectontology.protect.linkeddata.es/def/aexp#expectation"/>
+        <rdfs:provocation>Does the AI model intervene, or align with societal practices? 
+Is the intervention or alignment ethical, healthy or regressive?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://aexpectontology.protect.linkeddata.es/def/aexp#use_of_technology -->
+
+    <owl:Class rdf:about="http://aexpectontology.protect.linkeddata.es/def/aexp#use_of_technology">
+        <rdfs:subClassOf rdf:resource="http://aexpectontology.protect.linkeddata.es/def/aexp#expectation"/>
+        <rdfs:provocation>What are the expected uses of the AI system. 
+Does it have known and unknown potential misuses?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://ateontology.protect.linkeddata.es/def/ateo#approach -->
+
+    <owl:Class rdf:about="http://ateontology.protect.linkeddata.es/def/ateo#approach"/>
+    
+
+
+    <!-- http://ateontology.protect.linkeddata.es/def/ateo#ethical_assessment -->
+
+    <owl:Class rdf:about="http://ateontology.protect.linkeddata.es/def/ateo#ethical_assessment">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethic"/>
+        <rdfs:provocation>Did the team conduct its own ethical assessment? 
+At what stage of ML development did they assess the societal or ethical impacts of the AI system?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://ateontology.protect.linkeddata.es/def/ateo#reduced_capability -->
+
+    <owl:Class rdf:about="http://ateontology.protect.linkeddata.es/def/ateo#reduced_capability">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#academic_funding -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#academic_funding">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+        <rdfs:description>Funding received from an institute of higher education. This type of funding often has a strong research component.</rdfs:description>
+        <rdfs:provocation>What research problem does the project hope to explore? 
+Does the research question have larger social implications?
+What social justice framework is the research question grounded in?
+How will the research framework influence the overall design of the AI system?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#academic_institution -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#academic_institution">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>Refers to Institutes of higher education such as universities, colleges, research institutes or schools.</rdfs:description>
+        <rdfs:provocation>Is the academic institute inclusive and accessible or is it exclusionary and only caters to a certain elite? 
+Who is set to gain the most from the research project? 
+Did the culture of the academic institute influence the design of the AI system and the values encoded therein?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#accelerationist_ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#accelerationist_ethic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#achieve_sdg_goals -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#achieve_sdg_goals">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>When the design of an AI system is explicitly driven by the motivation to contribute to the UN&apos;s sustainable development goals.</rdfs:description>
+        <rdfs:provocation>Are the SDG goals adequately defined taking into account the actual needs of the community? 
+Is the team critical of the SDG goals? 
+Is the team aware of inequalities built into the design of the SDG goals? 
+What motivated the team to rely on SDG goals rather than on anything else?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#action_research -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#action_research">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>Social science research approach that is conducted with the intention to transform or intervene.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#activist -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#activist">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#equality_end_user"/>
+        <rdfs:description>A type of user who is actively involved in mobilizing a community for a social or political cause.</rdfs:description>
+        <rdfs:provocation>What values motivate an activist? 
+Are they set to receive any tangible or intangible gains from their involvement in the AI system? 
+Were they included as a relevant stakeholder in the design of the AI system?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#actor -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#actor">
+        <rdfs:description>Any human or nonhuman entity that is capable of action and influencing the network.</rdfs:description>
+        <rdfs:provocation>How do different actors involved in the AI system influence its overall design?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#affordance -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#affordance">
+        <rdfs:description>That aspect of a socio-technical system that offers possibilities for action. These are either intended or unintended possibilities.</rdfs:description>
+        <rdfs:provocation>How does the AI system alter human perception (Döbler &amp; Bartnik, 2022)? 
+How does it make us relate to the world in different ways? 
+How does it reflect our past, present and future?</rdfs:provocation>
+        <rdfs:references>“Technologies help to determine how people act, so that it is not only people but also things who give answers to the classical moral question, ‘How to live?’”</rdfs:references>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ai4sg -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ai4sg">
+        <rdfs:description>Refers to ideas/discourse that emphasise upon the use, development and deployment of AI systems for social good.</rdfs:description>
+        <rdfs:provocation>What do the actors involved mean by social good? 
+How did they arrive at their definition? 
+Did they consider the normative values underpinning the definition of social good? 
+Who gets to define what is social good?</rdfs:provocation>
+        <rdfs:references>AI4SG is often conflated to mean “AI4SG = AI×SDGs” with  &quot;the assumption that “SDGs offer clear, well defined and shareable boundaries to identify positively what is socially good AI” and that “SDGs are internationally agreed on goals for development and have begun informing relevant policies worldwide, so they raise fewer questions about relativity and cultural dependency of values” [25:112]. Such framing has some glaring shortcomings that Cowls et al. choose to ignore. UN SDGs, like most United Nations consensus exercises, are not legally binding nor represent goals and principles that political groups intra-nationally or trans-nationally agree upon. Secondly, SDGs, as Telleria and Garcia-Arias [95:15] argue, is an “empty signifier that keeps disparate and even contradictory demands united”. It does this by constructing “a fantasmatic explanation of international development and sustainability issues that conceals the antagonistic dimension of social, political and economic issues” [95:15]. In a later special issue introduction edited by Cowls, Cowls notes contrary to such a straightforward and simple solution that “The contributions make clear that neither ‘AI’ nor ‘social good’ should be thought of as uncontested or incontestable terms, and we should remain wary of the twin dangers of unjustified hype and unseen harm arising from the continued growth of interest in, and application of, AI” [24:54].&quot; ( Arora &amp; Sarkar, 2023)</rdfs:references>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ai_system -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ai_system">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#technology"/>
+        <rdfs:description>A socio-technical system that uses some aspect of artificial intelligence to complete a task or achieve a goal..</rdfs:description>
+        <rdfs:provocation>Does the problem need an AI system as a solution? 
+Did the team consider the socio-technical aspects of an AI system? 
+Is the team aware of its limitations? 
+Do they have adequate expections concerning the AI system and its potential to achieve social good?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#angel_investment -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#angel_investment">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+        <rdfs:description>Personal investment made by high-net-worth individuals or a group of individuals either informally or through social networks. These investors invest their own money to provide early-stage funding in exchange for financial and non-financial returns. They sometimes play an active role in the business either as advisors or members of the board of directors.</rdfs:description>
+        <rdfs:provocation>What monetary or non-montary value did the investor see in the AI system. 
+Did the investor gain directly from investing in the AI system? 
+Did they incrue any indirect value from their investment? 
+Does the involvement impact the design of the AI system?</rdfs:provocation>
+        <rdfs:references>&quot;Grounded in agency theory, our findings suggest that strategic
+readiness for funding and passion matter more to angel investors, that economic
+potential matters more to VCs, and that both investor types place similar weights on the
+specific human capital of entrepreneurs.&quot; &quot;In addition, angel investors are concerned about the entrepreneur’s behavior once they decide to invest (Kelly and Hay 2003). In other words, they are likely to use behaviororiented mechanisms to control the entrepreneur after investing. Many angel investors, unlike VCs, want to be informed about the daily operation of the venture and to work with the entrepreneur closely,such as visiting the venture or conducting recurring meetings with entrepreneurs (Landstro¨m 1998; Prowse 1998; Van Osnabrugge and Robinson 2000; Wright and Robbie 1998). Many angel investors also consider themselves co-entrepreneurs of the invested ventures and act like an entrepreneur (Landstro¨m 1998). The concept of coentrepreneurs not only aligns the goals of the angel investors with the entrepreneur’s goal but also mitigates the issue of information asymmetries through closely working with the entrepreneur&quot; (Hsu et al., 2014)&quot;</rdfs:references>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#anonymized_data -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#anonymized_data">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_data"/>
+        <rdfs:description>Anonymized data is data that cannot be traced back to a particular person.</rdfs:description>
+        <rdfs:provocation>Can the data be renonymized in future?</rdfs:provocation>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#anthropomorphism -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#anthropomorphism">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>Anthropomorphism refers to a tendency to think of non-human agents and actors in human likeness, terms and/or forms.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#appropriate_scale -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#appropriate_scale">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>An ethical parameter that is conscious of the constructed nature of the scales ie.e scales such as local, global, national etc are not given but constructed.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#artistic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#artistic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>A design motive that foregrounds the aesthetic considerations over and above everything else in its design of an AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#assumption -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#assumption">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension"/>
+        <rdfs:description>Any set of ethical and political values that are assumed in the design of a socio-technical system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#autonomous_self -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#autonomous_self">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#non_relational_approach"/>
+        <rdfs:description>A non-relational approach that defines an individual as an independent, rational agent who is set apart from the larger milieu.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#bias -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#bias">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>When the results of an AI system are systemically prejudiced due to both accounted or unaccounted assumptions in the machine learning process.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#bigdata_analysis -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#bigdata_analysis">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#quantiative"/>
+        <rdfs:description>A method of data analysis that detects trends, patterns, and correlations in large amounts of data.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#borrower -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#borrower">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>A type of user that receives money, assets, or services on credit from another individual, organization or the bank.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#care_ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#care_ethic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:description>A type of ethical framework that prioritizes the relationship of care especially with those who are vulnerable.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#case_study -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#case_study">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of qualitative and/or quantitative research method that engages in an indepth study of one or small number of individuals, groups or events.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#censorship -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#censorship">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of risk where either an indiviual or a group is not allowed to express an opinion or share information.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#co-design -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#co-design">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of research method where knowledge/or an artefact is coconstructed with the individual, group or community that has stakes in the knowledge/artefact being produced.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#coaching_centre -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#coaching_centre">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_consumer"/>
+        <rdfs:description>Private institutes that offer educational or training services outside of the schol system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#collective -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#collective">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>Type of organization where individuals come together to work on shared interests. These groups often function on the premise of non-hierarchy and  collaboration among members.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#community -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#community">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#equality_end_user"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>A group of individuals or groups who share common interests, values, goals and frequently interact with each other.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#community_driven -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#community_driven">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+        <rdfs:description>A type of funding where members of the community pool their personal resources to fund an enterprise or a socio-technical system that is expected to provide mutual benefits.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#consequence -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#consequence">
+        <rdfs:description>An effect of an action or a decision.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#consumer -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#consumer">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#user"/>
+        <owl:disjointWith rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#end_user"/>
+        <rdfs:description>Those set of users who use the system either for their personal consumption or to deliver services to their customers.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#content_developer_publisher -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#content_developer_publisher">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_consumer"/>
+        <rdfs:description>Type of consumer that develops or publishes textbooks, guidebooks or any other kind of content that is used to facilitate teaching and learning.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#corporate_funding -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#corporate_funding">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+        <rdfs:description>A type of funding where a company funds an AI system in exchange of deriving future benefits from the system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#critical_discourse_analysis -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#critical_discourse_analysis">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>An interdisciplinary analytical approach that interrogates how texts, symbols, and language construct what&apos;s considered right and wrong, or how objects, bodies and relations are made sense of.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#critical_incident_analysis -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#critical_incident_analysis">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of qualitative method where a significant event or incidents is studied to understand a particular phenomenon.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#crowdfunding -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#crowdfunding">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+        <rdfs:description>A type of funding where an idea is pitched to a larger number of individuals who are asked to contribute small amounts to finance a project.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#customer -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#customer">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>An individual or a group whose purchase of goods and services is mediated by an AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#data_justice -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#data_justice">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>A design intention with an aim to advance access or use of data to nurture egalitarian relations in the society.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#deep_ecology -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#deep_ecology">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_ontology"/>
+        <rdfs:description>A type of relational ontology that privileges a holistic and intrinsic relationship between humans and the natural environment.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#defamation -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#defamation">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A form of text/speech that uses false information to injure a group or an individual&apos;s reputation.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#deliberative_forums -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#deliberative_forums">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of research method that facilitates &quot;extended discussions taking place over two or three days, in which the participants are able to play the leading role in deciding the issues to be discussed and how they are approached&quot; (Taylor-Gooby et al., 2018).</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#deontological_ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#deontological_ethic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:description>A rule-based, normative ethical framework that insists upon actions as being morally right or wrong.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#deployment -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#deployment">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension"/>
+        <rdfs:description>The manner in which an AI system is deployed. One of the dimensions that affects how the AI system will be perceived, used, and experienced.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#design -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#design">
+        <rdfs:description>A deliberate and systematic process of creating, structuring, and planning the system&apos;s architecture, functionality, user interfaces, and algorithms to achieve specific goals, optimize performance, enhance user experience, and ensure ethical and responsible behavior in accordance with user needs and intended applications. AI system design encompasses various aspects, including data collection, algorithm development, user interaction, and ethical considerations.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#design_motive -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#design_motive">
+        <rdfs:description>Design ideas, principles or claims that motivate the design of an AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#deskilling -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#deskilling">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>One of the harms of AI whereby previous skills of workers are made redundant by introducing machine or technologies into the workplace.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#developer -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#developer">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#human"/>
+        <rdfs:description>An individual or a group that programs or codes the AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#developer_as_active_practitioner -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#developer_as_active_practitioner">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter"/>
+        <rdfs:description>An ethical relation that redefines the role of a developer as active practitioner and sense-maker.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#disruptive -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#disruptive">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#rhetoric"/>
+        <rdfs:description>A market intervention that disrupts existing business networks or creates a new market niche to generate value.</rdfs:description>
+        <rdfs:references>&quot;The detached perspective of the moral philosopher and observer is thus replaced by that of the active practitioner and sense-maker: we find ourselves in the lifeworld, understood as a practical and relational space where the question of what to do for and with a plant matters&quot; (Coeckelbergh 2023).</rdfs:references>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#domain -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#domain">
+        <rdfs:description>Broader areas such as healthcare, education, finance etc. within which AI systems are being used and deployed. Each domain has unique challenges and use-cases vis-à-vis AI systems.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#economic_consumer -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#economic_consumer">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#consumer"/>
+        <rdfs:description>A user of an AI system who is not negatively affected by the use of an AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#economic_empowerement -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#economic_empowerement">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#domain"/>
+        <rdfs:description>One of the AI4SG domains that aims to use AI to improve access to economic tools for social good.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#economic_end_user -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#end_user"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#education -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#education">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#domain"/>
+        <rdfs:description>One of the AI4SG domains that aims to use AI to improve access to education.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#education_consumer -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#education_consumer">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#consumer"/>
+        <rdfs:description>A type of education consumer that uses AI system to deliver its services.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#education_end_user -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#education_end_user">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#end_user"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#employee -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#employee">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>A type of worker who is employed by an organization on a long-term basis and is often eligible to receive social benefits as part of their employment contract.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#end_user -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#end_user">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#user"/>
+        <rdfs:description>Users who are affected by the system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#environmental_impact -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#environmental_impact">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of risk where the hardware and energy required to build and maintain AI system has negative impacts on the environment.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#equality_and_inclusion -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#equality_and_inclusion">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#domain"/>
+        <rdfs:description>One of the domains of AI4SG that aims to use an AI system to improve social equality and cohesion.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#equality_consumer -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#equality_consumer">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#consumer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#equality_end_user -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#equality_end_user">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#end_user"/>
+        <rdfs:description>A type of user who is negatively affected by the use of an AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#equity -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#equity">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>An ethical parameter that pivots upon the values of fairness and equality.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic">
+        <rdfs:description>A set of moral principles that guide human behavior, that help distinguish between right and wrong based on personal values, societal norms, and political necessities.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethic_dumping -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_dumping">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethics_manipulation"/>
+        <rdfs:description>A type of unethical risk wherein researchers conduct prohibitive research in low-income countries or settings which have loose regulatory frameworks.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethic_lobbying -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_lobbying">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethics_manipulation"/>
+        <rdfs:description>A type of unethical risk wherein private actors (are at least suspected to) try to use self-regulation about the ethics of AI in order to lobby against the introduction of legal norms, or in favour of their watering down or weakening their enforcement, or in order to provide an excuse for limited compliance (Floridi 2019).</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethic_shirking -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_shirking">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethics_manipulation"/>
+        <rdfs:description>An ethical malpractice of applying double standards in moral evaluations.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethic_shopping -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_shopping">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethics_manipulation"/>
+        <rdfs:description>The malpractice of choosing, adapting, or revising (“mixing and matching”) ethical principles, guidelines, codes, frameworks, or other similar standards (especially but not only in the ethics of AI), from a variety of available offers, in order to retrofit some pre-existing behaviours (choices, processes, strategies, etc.), and hence justify them a posteriori, instead of implementing or improving new behaviours by benchmarking them against public, ethical standards (Floridi 2019).</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethic_washing -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_washing">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethics_manipulation"/>
+        <rdfs:description>The malpractice of making unsubstantiated or misleading claims about, or implementing superficial measures in favour of, the ethical values and benefits of digital processes, products, services, or other solutions in order to appear more digitally ethical than one is (Floridi 2019).</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethical_dilemma -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethical_dilemma">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>Risk where technological developments throw new ethical concerns and challenges.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethical_framework -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethic"/>
+        <rdfs:description>A framework that helps decide the most just and ethical course of action.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethic"/>
+        <rdfs:description>A single characteristic of a larger framework.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethico_political_care -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethico_political_care">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter"/>
+        <rdfs:description>A redefinition of care ethics that asks how ethical aspirations to ‘do good’ are entangled in politically charged care practices that are ‘ambivalent, contextual, and relational’ (Martin et al. 2015: 631) and can be fraught with histories of sexism, racism, capitalism and colonialism (Murphy 2015).</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethics_as_political -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethics_as_political">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter"/>
+        <rdfs:description>&quot;To rethink ethics in a broader manner via engaged epistemology in a way that puts the needs and welfare of the most impacted and marginalized at the center.” (Birhane 2021).</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethics_manipulation -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethics_manipulation">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethic"/>
+        <rdfs:description>A type of malpractice that uses the vocabulary of ethics to achieve unfair, inequitable, unjust goals.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ethnographic_research -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethnographic_research">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of qualitative method that uses fieldwork to undertake an indepth study of a particular phenomenon, group or society.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#exclusionary_norm -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#exclusionary_norm">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of risk wherein the use of AI disproportionately excludes or discriminates against certain individuals or groups,</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#experiment -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#experiment">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>A design principle that experiments with new ideas and concepts.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#explainability -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#explainability">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>One of the ethical parameters that insist on the need to make the decision making of AI systems human-understandable.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#fairness -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#fairness">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>An ethical parameter that aims to remedy or prevent wrongful harms resulting from biased algorithmic outputs.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#farmer -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#farmer">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>A person or a collective engaged in agriculture activities.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#feminist_ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#feminist_ethic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:description>An ethical framework that seeks to address and rectify traditional ethical theories&apos; historical androcentrism (male-centered focus) by promoting values such as equity, justice, and empathy, with a particular emphasis on the experiences and concerns of women and marginalized gender groups.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#financial_institutions -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#financial_institutions">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_consumer"/>
+        <rdfs:description>Financial institutions are organizations that provide a wide range of financial services to individuals, businesses, and governments. These services typically include banking, lending, investment, and insurance activities.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#focus_group -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#focus_group">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of research method that brings together a small group of people to answer questions in a moderated setting.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#for_profit -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#for_profit">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>A type of organization that operates on for-profit basis.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#freelancer -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#freelancer">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#worker"/>
+        <rdfs:description>A type of worker who is self-employed and performs task-based assignments with no fixed employer. They usually work on temporary contracts, and may or may not use an online intermediary to find assignments.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#funder -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#funder">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#human"/>
+        <rdfs:description>A type of actor that provides financial support to the team developing the AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#gig-worker -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#gig-worker">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#worker"/>
+        <rdfs:description>A gig worker, also known as a gig economy worker or independent contractor, is an individual who engages in short-term, freelance, or on-demand work arrangements, often through digital platforms or apps, where they provide services or complete tasks for clients or customers on a project-by-project basis.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#government_agency -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#government_agency">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>A government agency is a specialized organization established and funded by a government to perform specific functions, tasks, or services, often related to regulation, administration, or public service delivery.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#government_funding -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#government_funding">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+        <rdfs:description>A type of funding offered by state or national agency, ministry from the public funds.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#group -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#group">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#equality_end_user"/>
+        <rdfs:description>A collection of individuals who are members of a group based on their identity, ideas, beliefs or practices.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#harmony -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#harmony">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#hate_speech -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#hate_speech">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of speech that aims to exacerbate polarization in the society.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#human -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#human">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#human_action -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#human_action">
+        <rdfs:description>Human action refers to intentional and purposeful behaviors or activities undertaken by individuals, driven by their thoughts, desires, and motivations, to achieve specific goals or outcomes.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#human_machine_relation -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#human_machine_relation">
+        <rdfs:description>Refers to the ways in which humans and machines interrogate and coproduce each other.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#hype -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#hype">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>When the use of an AI system is over-promised by the developers resulting in unjustified deployment.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#hyped -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#hyped">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#rhetoric"/>
+        <rdfs:description>A type of rhetoric that oversells the benefits or harms of a system to create value.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk">
+        <rdfs:description>Negative impacts of AI systems that have been recognized so far.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#immigrant -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#immigrant">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>A type of user who lives in a foreign country to settle as permanent residents.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#in_on_or_out_of_the_decision-making_loop -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#in_on_or_out_of_the_decision-making_loop">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#human_machine_relation"/>
+        <rdfs:description>A phrase that is often used to refer to the role that humans have in the decision making as part of the socvio-technical system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#inaccuracy -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#inaccuracy">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of harm ensuing from  incorrect or misleading results, predictions, or information, potentially causing harm by leading to erroneous decisions, misinformation, or mistrust in the technology&apos;s reliability.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#industry_association -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#industry_association">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>An association that protects the interests of companies and employers part of the same industry.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#inequality -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#inequality">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>Exacerbation or perpetuation of existing social, economic, or opportunity disparities by artificial intelligence systems.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#information_disorder -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#information_disorder">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>Dissemination of false, misleading, or harmful information facilitated by artificial intelligence systems. It includes the generation, amplification, or manipulation of misleading content, leading to confusion, misinformation, and potentially harming individuals, society, or democratic processes.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#information_ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#information_ethic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:description>&quot;Treats &apos;the world of data, information, and knowledge, with their relevant life-cycles, as a new environment, the infosphere, in which human beings, as informational organisms, may be flourishing.&apos;&quot;</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#intelligence_as_emergent -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#intelligence_as_emergent">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter"/>
+        <rdfs:description>Refers to the idea that intelligence is not innate or unique to humans but emerges in relations and varies from actor to actor.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#intended -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#intended">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#consequence"/>
+        <owl:disjointWith rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#unintended"/>
+        <rdfs:description>A type of consequence that was accounted for and anticipated in the design of the AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#intergovernmental_organization -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#intergovernmental_organization">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>An entity created by a treaty, involving two or more nations, to work in good faith, on issues of common interest.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#interpretation -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#interpretation">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension"/>
+        <rdfs:description>It refers to the human imaginative and meaning making capacity and it affects how they interact  experience or relate to an AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#interview -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#interview">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#quantiative"/>
+        <rdfs:description>A type of qualitative method in which a researcher conducts structure, semi-structured or unstructured conversation with individuals which is then collected and  analysed.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#justice -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#justice">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>Fair and equitable treatment of individuals and groups in the development, deployment, and impact of artificial intelligence systems.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#knowing-how -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#knowing-how">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethico_political_care"/>
+        <rdfs:description>A question that is critical of the normative stratgies of doing things in a situation.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#knowing-that -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#knowing-that">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethico_political_care"/>
+        <rdfs:description>A question that is critical of normative values and and principles in a given system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#knowing-when -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#knowing-when">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethico_political_care"/>
+        <rdfs:description>A question that insists on recognizing how pasts, presents and futures converge in a moment.</rdfs:description>
+        <rdfs:references>&quot;Indeed, Michael points out the importance of recognizing how pasts, presents
+and futures, understood as ‘entities and occasions, discourses and practices, humans
+and non-humans’ (Michael 2014: 240), converge within the event of a disaster. He argues that while there may be a need to ‘slow down’ the repair of such
+ruptures, this deceleration can be accompanied by an ‘acceleration in the processes
+of asking more inventive questions, of fnding better meanings, and of enabling fner
+responses’ (Michael 2014: 244).&quot;</rdfs:references>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#legal_compliance -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#legal_compliance">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>Adherence of artificial intelligence systems and their developers, users, or operators to relevant laws, regulations, and standards governing AI technology.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#lender -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#lender">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>A type of economic end user that gives money to a borrower.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#manipulation -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#manipulation">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>To influence, deceive, or control individuals, groups, or information. It involves the deliberate use of AI algorithms or systems to distort perceptions, emotions, or decision-making processes in ways that are typically harmful, exploitative, or contrary to the well-being and autonomy of individuals.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#market_oriented -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#market_oriented">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>Certain design motivations that rely on the market to asses needs and solutions.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#material_psychological_harm -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#material_psychological_harm">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>Tangible, adverse psychological or emotional consequences experienced by individuals, such as stress, anxiety, or depression, due to the actions or decisions made by artificial intelligence systems, algorithms, or technology.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#material_semiotic_difference -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#material_semiotic_difference">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_ontology"/>
+        <rdfs:description>Differences among humans that are weaved together in both language and matter.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#mathematical_criteria -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#mathematical_criteria">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#non_relational_approach"/>
+        <rdfs:description>&quot;Mathematical translations of some ideals or principles for a local distribution of computational or material benefits or burdens among people.”</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#matter_of_concern -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#matter_of_concern">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_mattering"/>
+        <owl:disjointWith rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#matter_of_fact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#matter_of_fact -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#matter_of_fact">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_mattering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#matter_of_interface -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#matter_of_interface">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_mattering"/>
+        <rdfs:description>&quot;For questions regarding responsibility, forward-looking and backward-looking, it is important to clarify all these structural and temporal relations and interactions: not only the social interactions and roles of humans but also their interactions with things and the relations and interactions between things. In this sense, responsibility for technology is not only a matter of faces but also of interfaces.&quot; (Coeckelbergh, 2020)</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#method -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#method">
+        <rdfs:description>Strategy employed to gather, analyze, and interpret data or information in order to answer specific questions or investigate phenomena.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#multi_stakeholder_engagement -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#multi_stakeholder_engagement">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of research method that involves multiple relevant parties or groups with diverse interests, perspectives, and expertise in the research process to ensure comprehensive and inclusive problem-solving and decision-making.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension">
+        <rdfs:description>Different aspects that affect how an AI system is perceived and experienced by the user.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#multiple_use -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#multiple_use">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>An AI system can have multiple use cases which weren&apos;t accounted for by the designers and negatively impact the users.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#new_risks -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#new_risks">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>Type of risk that is as yet unaacounted for and there are not social, legal or political safeguards against it.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#ngo -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ngo">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_consumer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#non-personal_data -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#non-personal_data">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_data"/>
+        <rdfs:description>Non-personal data refers to information that does not directly or indirectly identify specific individuals. This type of data is typically aggregated, anonymized, or stripped of any personally identifiable information (PII), such as names, addresses, or contact details. Non-personal data can include statistical data, trends, patterns, and other information that is useful for analysis, research, or business purposes without compromising individuals&apos; privacy.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#non_discrimination -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#non_discrimination">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>An ethical parameter that ensures that individuals or groups are not discriminated against by the AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#non_human -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#non_human">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#non_human_autonomy -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#non_human_autonomy">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>Non-human autonomy as an ethical parameter refers to the capacity or degree of independence and decision-making authority granted to artificial intelligence, robots, or autonomous systems, while considering their potential impact, constraints, and responsibilities in relation to human society and values.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#non_relational_approach -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#non_relational_approach">
+        <rdfs:description>Type of approaches that see autonomy, objectivity, independence as core values.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#nongovernmental_organization -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#nongovernmental_organization">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#nonprofit -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#nonprofit">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#not_listed -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#not_listed">
+        <rdfs:description>An aspect of socio-technical system that is not part of this ontology.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#notice_and_consent -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#notice_and_consent">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#non_relational_approach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#online_platform -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#online_platform">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_consumer"/>
+        <rdfs:description>An online platform refers to a digital environment or software system designed to facilitate teaching, learning, and educational activities over the internet.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#parent -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#parent">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_end_user"/>
+        <rdfs:description>A parent is an individual who has given birth to or legally adopted a child and is responsible for their upbringing, care, and well-being.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#participatory_design -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#participatory_design">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of qualitative research method that includes research subjects as participants to shape and have stakes in the knowledge output.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#paternalist -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#paternalist">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>A form of decision-making or governance in which an authority figure or organization makes choices or enforces policies on behalf of others, believing that it is for their own good. Paternalism often involves restricting individual autonomy or freedom to protect individuals from harm, even if they may not agree with or prefer those decisions.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#permanent -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#permanent">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#worker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#personal_data -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#personal_data">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_data"/>
+        <rdfs:description>Personal data refers to any information that relates to an identifiable individual. It includes data that can directly identify a person, such as their name, address, phone number, email address, and government-issued identification numbers (e.g., social security number or passport number). Personal data can also encompass less obvious information like online identifiers (e.g., IP addresses or cookies), biometric data (e.g., fingerprints or facial recognition data), and details about a person&apos;s physical, physiological, genetic, economic, cultural, or social identity.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#philanthropic_funding -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#philanthropic_funding">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+        <rdfs:description>Financial contributions or donations provided by individuals, organizations, foundations, or corporations to support charitable, social, educational, cultural, or humanitarian causes.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#polarisation_and_radicalization -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#polarisation_and_radicalization">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>Exacerbation or reinforcement of ideological divisions or extreme viewpoints within society by AI algorithms or platforms that unintentionally or intentionally promote content that amplifies existing differences, fosters echo chambers, and discourages constructive dialogue among individuals or groups with opposing views.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#policy_maker -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#policy_maker">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_consumer"/>
+        <rdfs:description>An individual or entity responsible for shaping, developing, and implementing educational policies, regulations, and initiatives that impact educational institutions, practices, and systems.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#postcolonial_ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#postcolonial_ethic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:description>Postcolonial ethics is a moral framework that addresses the ethical implications of colonial histories, emphasizing decolonization, cultural respect, and justice in the aftermath of colonialism.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#proactive -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#proactive">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>Proactive design is an approach to product or system design that anticipates and addresses potential issues, challenges, or needs before they arise, aiming to prevent problems and improve user experiences. It involves proactive problem-solving and a forward-thinking mindset to create solutions that are more robust, user-friendly, and efficient.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#prospective_transparency -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#prospective_transparency">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#transparency"/>
+        <owl:disjointWith rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#retrospective_tranparency"/>
+        <rdfs:description>Prospective transparency informs users about the data processing and the working of the system upfront. It describes how the AI system reaches decisions in general. Thus, prospective transparency can be seen as an accountability mechanism (Zerilli et al., 2018).</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#qualitative -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#qualitative">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#method"/>
+        <owl:disjointWith rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#quantiative"/>
+        <rdfs:description>An iterative process in which improved understanding to the scientific community is achieved by making new significant distinctions resulting from getting closer to the phenomenon studied. Qualitative research, as defined here, is consequently a combination of two criteria: (i) how to do things –namely, generating and analyzing empirical material, in an iterative process in which one gets closer by making distinctions, and (ii) the outcome –improved understanding novel to the scholarly community. (Aspers &amp; Corte, 2019)</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#quantiative -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#quantiative">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#method"/>
+        <rdfs:description>&quot;Emphasize objective measurements and the statistical, mathematical, or numerical analysis of data collected through polls, questionnaires, and surveys, or by manipulating pre-existing statistical data using computational techniques. Quantitative research focuses on gathering numerical data and generalizing it across groups of people or to explain a particular phenomenon.&quot;</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#question -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#question">
+        <rdfs:description>An inquiry presented to seek information, clarification, or a response from someone.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#reactive -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#reactive">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>A design motive that aims to meet immediate needs or goals without reflecting on its long-term value or benefit to the user.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_approach"/>
+        <rdfs:description>Ethical parameters that have been redefined from relational perspectives.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#reduced_accessbility -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#reduced_accessbility">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>When AI systems inadvertently or intentionally limit access to information, services, or opportunities for certain individuals or groups, particularly those with disabilities or marginalized communities. This harm can manifest as barriers to digital access, discrimination in automated systems, or the exclusion of people who rely on accessible technologies.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#relational_approach -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#relational_approach">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relationality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#relational_ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#relational_ethic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:description>An ethical framework that centres relations between actors as site of ethical contestation and deliberation.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#relational_ontology -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#relational_ontology">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#relational_approach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#relationality -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#relationality"/>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#relevance -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#relevance">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>Consideration of the importance, significance, and appropriateness of information, decisions, or actions within a specific context. It ensures that ethical choices and actions are well-suited to address specific needs and concerns, promoting effectiveness and fairness.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#research_institute -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#research_institute">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>A type of organization that conducts research.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#researcher -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#researcher">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_end_user"/>
+        <rdfs:description>An individual who is engaged by an institute or an organization to conduct researh.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#respects_privacy -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#respects_privacy">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>An ethical parameter that refers to the extent to which AI systems safeguard individuals&apos; personal information, uphold their confidentiality, and ensure that data handling and processing align with established privacy norms, laws, and user consent.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#responsibility -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#responsibility">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>The obligation of individuals, organizations, and developers involved in AI technologies to act ethically, transparently, and accountably throughout the AI lifecycle.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#responsiblity_as_responseability -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#responsiblity_as_responseability">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#retrospective_tranparency -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#retrospective_tranparency">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#transparency"/>
+        <rdfs:description>&quot;Retrospective transparency, on the other hand, refers to post hoc explanations and rationales (Paal and Pauly, 2018). Retrospective transparency includes the notion of inspectability and explainability”</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#rhetoric -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#rhetoric"/>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#safety_and_security -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#safety_and_security">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>Designed, deployed, and maintained in a way that protects against unintended harm, cyber threats, and breaches of privacy, thereby safeguarding individuals and society from potential risks and vulnerabilities.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#scalar -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#scalar">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#school -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#school">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_consumer"/>
+        <rdfs:description>A type of educational institution that provide learning spaces and learning environments for the teaching of students under the direction of teachers.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#self-funding -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#self-funding">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+        <rdfs:description>A type of funding where an individual or a group pools their own personal financial resources to develop an AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#self_employed -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#self_employed">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>An individual who doesn&apos;t have an employer, and often have their own buiseness or firm. Also used to refer to freelancers and gig workers.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#sensitive_data -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#sensitive_data">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_data"/>
+        <rdfs:description>Sensitive data refers to any information that, if disclosed or accessed by unauthorized parties, could result in harm, privacy violations, or other adverse consequences. This data category often includes personal, confidential, or proprietary information, such as financial records, medical records, Social Security numbers, trade secrets, or classified government data.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#shared_fairness -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#shared_fairness">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#small_medium_enterprise -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#small_medium_enterprise">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>A small and medium-sized enterprise (SME) is a business characterized by its relatively small workforce, revenue, and assets.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#social_good -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#social_good">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>A type of design motive where the designers intend to to contribute to a social good.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#social_impact_assesment -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#social_impact_assesment">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of qualitative method that involves evaluating the potential effects of a project, policy, or program on society by gathering and analyzing non-numeric data, such as community perspectives and qualitative indicators.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#social_isolation -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#social_isolation">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of risk that can have potential adverse effects on individuals&apos; mental and emotional well-being caused by overreliance on or excessive use of artificial intelligence, which may reduce face-to-face human interactions and weaken social connections, leading to loneliness and social disconnection.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#social_worker -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#social_worker">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#equality_end_user"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#socio_technical_system -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#socio_technical_system"/>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#solutionist -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#solutionist">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#rhetoric"/>
+        <rdfs:description>A type of rhetoric that promises to offer simple technology solutions to complex social problems.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#solve_social_problem -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#solve_social_problem">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+        <rdfs:description>A type of design-motive that prioritizes soliving one particular social problem with the help of an AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#spatial -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#spatial">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#speculative_design -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#speculative_design">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>A type of qualitaitve research method that prioritizes conceptualizing egalitarian, alternative futures.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#speculative_ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#speculative_ethic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:description>A type of ethical framework that moves away from &apos;if, then&apos; ethical framing to &apos;what, if&apos; focussing on how human-nonhuman relations are formed and contested in everyday.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#startup -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#startup">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#stock_trader -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#stock_trader">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#structurally_disadvantaged -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#structurally_disadvantaged">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#student_and_learner -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#student_and_learner">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_end_user"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#surveillance -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#surveillance">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of harm that can result in extensive, invasive, or unwarranted monitoring, data collection, and tracking of individuals or groups, potentially leading to privacy violations, discrimination, and social control.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#survey -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#survey">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#quantiative"/>
+        <rdfs:description>A type of quantitative method that involves systematically collecting structured data from a representative sample of individuals or entities through standardized questionnaires or interviews to gather numerical insights and analyze patterns or trends.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#teacher_and_educator -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#teacher_and_educator">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_end_user"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#tech-centric -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#tech-centric">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#design_motive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#techno-human_ecology -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#techno-human_ecology">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#deep_ecology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#technology -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#technology"/>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#technology_company -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#technology_company">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>A tech company, short for technology company, is an organization that primarily focuses on developing, manufacturing, or providing products, services, or solutions related to information technology, electronics, software, or other advanced technologies, often for commercial purposes and innovation-driven markets.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#temporal -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#temporal">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension"/>
+        <rdfs:description>A type of dimension that considers how an AI system is experienced overtime, or how a system affects our experience of time.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#temporary -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#temporary">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#worker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#think_tank -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#think_tank">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>A think tank is a policy institute undertaking research and advocacy on social policy, political strategy, economics, military, technology, and culture.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#threat_to_privacy -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#threat_to_privacy">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of harms that poses a threat to person&apos;s personal data.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#threat_to_safety -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#threat_to_safety">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of risk that could result in physical harm, injury, or adverse consequences to individuals, society, or the environment due to errors, biases, or malicious actions.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#training_institute -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#training_institute">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_consumer"/>
+        <rdfs:description>An institute of higher learning that offers vocational training.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#transparency -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#transparency">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>One of the ethical parameters that insists that all stakeholders should understand how the system works.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#transparency_as_performativity -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#transparency_as_performativity">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#redefined_ethical_parameter"/>
+        <rdfs:description>Reinterpretation of transparency that foregrounds the wider frame and contextual social factors that determine the meaning and effect of transparency practices.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#transparency_as_verifiability -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#transparency_as_verifiability">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#non_relational_approach"/>
+        <rdfs:description>Transparency is understood simply as the disclosure of information. For instance, when organizations release  information about their internal practices.</rdfs:description>
+        <rdfs:references>The second approach, however, looks at the tensions, struggles, and discourses inherent in transparency projects, and at unintended consequences and downsides of transparency. Following this approach, transparency should be understood more holistically, including the socio-material and ritualistic practices of organizations when they ‘‘perform’’ transparency. The performativity perspective understands transparency practices as social and organizational phenomena whose meaning goes substantially beyond the information conveyed. Similarly, technology compa nies such as Facebook or Google employ strong narra tives of openness, connectedness, and sharing on the user side while being highly secretive themselves.
+
+“In the information-based approach, the user is con ceptualized as an independent actor, who makes autonomous decisions on the basis of information made available to them through transparency. By contrast, the performativity account sees contextual social factors as considerably determining the meaning of transparency practices. We propose to bring insights from both perspectives together in a relational approach to transparency that draws on the concept of trustworthiness, where transparency is understood with regard to its relational function, as a signal of trustworthiness and willingness to be accountable to those affected by one’s actions or products.”
+
+“Trust is not a simple consequence of transparency”.
+
+“While the availability of information is important for trust, the relational context provides the wider frame within which the information itself may be valued in different ways.
+
+“Transparency is identifies as just one requirement among others, reinforcing the above interpretation that trustworthiness is a result of meeting a wider range of practical and normative requirements. 
+
+Felzmann, Heike, Eduard Fosch Villaronga, Christoph Lutz, and Aurelia Tamò-Larrieux. “Transparency You Can Trust: Transparency Requirements for Artificial Intelligence between Legal Norms and Contextual Concerns.” Big Data &amp; Society 6, no. 1 (January 2019): 205395171986054. https://doi.org/10.1177/2053951719860542.</rdfs:references>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#trust -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#trust">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_parameter"/>
+        <rdfs:description>One of the ethical parameters that aim to reduce human skepticism vis-à-vis AI systems and improve human-machine interaction.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#type_of_data -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#type_of_data">
+        <rdfs:description>Different types of data that are collected and could be used in development of AI systems.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#type_of_funding -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding">
+        <rdfs:description>Different ways in which projects, ideas, and AI systesm are financed.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#type_of_mattering -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#type_of_mattering">
+        <rdfs:description>Different ways in which things relate to each other.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#type_of_organization -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization">
+        <rdfs:description>Different kinds of organizations.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#unaccountability -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#unaccountability">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>A type of harm where a decision by an AI system cannot be explained or there&apos;s no one actor that can be held responsible for the damage.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#unemployed -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#unemployed">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>Individuals who are not currently employed.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#unemployment -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#unemployment">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>When a huge number of workers are retrenched due to the introduction of AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#unfair -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#unfair">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>When AI system&apos;s predictions or decisions result in or exacerbate harmful outcomes biased against vulnerable groups.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#unintended -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#unintended">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#consequence"/>
+        <rdfs:description>&quot;Those effects of an AI system which were unaccounted for in the design, deployment or use-case of the system.&quot;</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#union -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#union">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>An organization of workers that works towards maintaining or improving the working conditions of their members.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#university_and_college -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#university_and_college">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#education_consumer"/>
+        <rdfs:description>A type of education consumer that is involved in higher education, academic research, and authorized to grant academic degrees.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#use -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#use">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension"/>
+        <rdfs:description>The real-world use-case of an AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#user -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#user">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#human"/>
+        <rdfs:description>An individual or a group that uses the AI system.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#utilitarianism -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#utilitarianism">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:description>A type of normative ethical framework that prescribes actions to be morally good if they maximize happiness for most people.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#value -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#value">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#multiple_dimension"/>
+        <rdfs:description>The personal meaning-making or larger system of meaning through which an AI system is being made sense of.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#value-sensitive_design -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#value-sensitive_design">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#qualitative"/>
+        <rdfs:description>&quot;Value Sensitive Design is a theoretically grounded approach to the design of technology that accounts for (human) values in a principled and comprehensive manner
+throughout the design process.&quot;</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#venture_capital_firm -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#venture_capital_firm">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_organization"/>
+        <rdfs:description>A type of financial intermediary that manages and invest pooled capital into high-risk, potentially high-reward projects by buying equity or equity-linked stakes in the firm.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#venture_capital_funding -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#venture_capital_funding">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#type_of_funding"/>
+        <rdfs:description>Type of funding provided by venture capital firms or investors to startup companies and emerging businesses that are focused on developing and advancing artificial intelligence technologies, products, or services.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#virtue_ethic -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#virtue_ethic">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#ethical_framework"/>
+        <rdfs:description>A type of normative ethics that gives centrality to virtues or traits that are considered morally good. According to this framework, an action is ethical if it aligns with habits that are virtuous or morally good.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#weakening_of_democracy -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#weakening_of_democracy">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#identified_harm_risk"/>
+        <rdfs:description>Refers to a scenario where AI systems weaken democratic norms such as a equality, distribution of power, freedom of expression, autonomy etc.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#worker -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#worker">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#economic_end_user"/>
+        <rdfs:description>Any individual engaged in paid work.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#for_whom? -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#for_whom?">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#question"/>
+        <rdfs:description>A question situated in the ethical-political practice of care that critically evaluates what it means to care and how the object that is to be taken care of is constructed, presented, and studied.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#how_to_care? -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#how_to_care?">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#question"/>
+        <rdfs:description>&quot;A question situated in the ethical-political practice of care that critically evaluates the practice of caring and start from an understanding that &quot;what care can mean in each situation cannot be resolved by ready-made formulas&quot;.&quot;</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#what_for? -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#what_for?">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#question"/>
+        <rdfs:description>A question situated in the ethical-political practice of care that critically evaluates the reasons for caring without assuming a moral stance.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#who_cares? -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#who_cares?">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#question"/>
+        <rdfs:description>A question situated in the ethical-political practice of care that critically evaluates the body that is represented as being in the position of care.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontology.audit4sg.org/RelAIEO#why_to_care? -->
+
+    <owl:Class rdf:about="http://www.ontology.audit4sg.org/RelAIEO#why_to_care?">
+        <rdfs:subClassOf rdf:resource="http://www.ontology.audit4sg.org/RelAIEO#question"/>
+        <rdfs:description>A question situated in the ethical-political practice of care that critically evaluates the totalizing and normative effects of caring practices in favour of caring as provocation &quot;that remains speculative by not letting a situation or a position—or even the acute awareness of pervasive dominations—define in advance what is or could be&quot;.</rdfs:description>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#academic_funding"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#angel_investment"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#community_driven"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#corporate_funding"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#crowdfunding"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#government_funding"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#philanthropic_funding"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#self-funding"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#venture_capital_funding"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#academic_institution"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#collective"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#for_profit"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#government_agency"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#industry_association"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#intergovernmental_organization"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#nongovernmental_organization"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#nonprofit"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#startup"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#technology_company"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#think_tank"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#union"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#venture_capital_firm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#achieve_sdg_goals"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#data_justice"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#disruptive"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#market_oriented"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#paternalist"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#proactive"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#reactive"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#social_good"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#solve_social_problem"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#tech-centric"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#action_research"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#case_study"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#co-design"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#critical_discourse_analysis"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#critical_incident_analysis"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#deliberative_forums"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethnographic_research"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#focus_group"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#multi_stakeholder_engagement"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#participatory_design"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#social_impact_assesment"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#speculative_design"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#value-sensitive_design"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#assumption"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#deployment"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#interpretation"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#scalar"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#spatial"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#temporal"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#use"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#value"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#autonomous_self"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#mathematical_criteria"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#notice_and_consent"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#transparency_as_verifiability"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#borrower"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#customer"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#employee"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#farmer"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#immigrant"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#lender"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#self_employed"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#small_medium_enterprise"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#stock_trader"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#structurally_disadvantaged"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#unemployed"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#worker"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#developer"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#funder"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#user"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_dumping"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_lobbying"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_shirking"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_shopping"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethic_washing"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#ethico_political_care"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#intelligence_as_emergent"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#transparency_as_performativity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#freelancer"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#gig-worker"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#permanent"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#temporary"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#knowing-how"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#knowing-that"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#knowing-when"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#non-personal_data"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#personal_data"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#sensitive_data"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#for_whom?"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#how_to_care?"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#what_for?"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#who_cares?"/>
+            <rdf:Description rdf:about="http://www.ontology.audit4sg.org/RelAIEO#why_to_care?"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

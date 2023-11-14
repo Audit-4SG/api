@@ -13,7 +13,7 @@ app.add_middleware(
 )
 
 dirname = os.path.dirname(__file__)
-owl_file_path = os.path.join(dirname, 'ontology/RelAIEO_v4.owl')
+owl_file_path = os.path.join(dirname, 'ontology/RelAIEO_v6.owl')
 g = Graph()
 g.parse(owl_file_path)
 
