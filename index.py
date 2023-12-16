@@ -20,8 +20,6 @@ g.parse(owl_file_path)
 
 graph_jsonld = g.serialize(format='json-ld')
 
-session_id = str(uuid.uuid4())
-
 @app.get("/test")
 async def python_test():
     print(owl_file_path)
@@ -29,4 +27,5 @@ async def python_test():
 
 @app.get("/")
 async def root():
+    session_id = str(uuid.uuid4())
     return { "success": True, "payload": graph_jsonld, "sessionId": session_id}
