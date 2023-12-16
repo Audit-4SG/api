@@ -1,4 +1,5 @@
 import os
+import uuid
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from rdflib import Graph
@@ -19,6 +20,8 @@ g.parse(owl_file_path)
 
 graph_jsonld = g.serialize(format='json-ld')
 
+session_id = str(uuid.uuid4())
+
 @app.get("/test")
 async def python_test():
     print(owl_file_path)
@@ -26,4 +29,4 @@ async def python_test():
 
 @app.get("/")
 async def root():
-    return { "success": True, "payload": graph_jsonld}
+    return { "success": True, "payload": graph_jsonld, "sessionId": session_id}
