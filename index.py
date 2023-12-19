@@ -1,6 +1,7 @@
 import os
 import sqlite3
 import uuid
+import json
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -37,10 +38,12 @@ class Share(BaseModel):
 async def save_to_db(data: Share):
     res = cur.execute('''SELECT * FROM shares WHERE sessionId = ?''', (data.sessionId,))
     if len(res.fetchall()) > 0:
-        cur.execute('''UPDATE shares SET selectedCardIds = ? WHERE sessionId = ?''', (str(data.selectedCardIds), data.sessionId,))
+        # cur.execute('''UPDATE shares SET selectedCardIds = ? WHERE sessionId = ?''', (str(data.selectedCardIds), data.sessionId,))
+        cur.execute('''UPDATE shares SET selectedCardIds = ? WHERE sessionId = ?''', (json.dumps(data.selectedCardIds), data.sessionId,))
         con.commit()
     else:
-        row = [data.sessionId, str(data.selectedCardIds)]
+        # row = [data.sessionId, str(data.selectedCardIds)]
+        row = [data.sessionId, json.dumps(data.selectedCardIds)]
         cur.execute('INSERT INTO shares VALUES (?, ?)', row)
         con.commit()
     return {"success": True}
@@ -50,7 +53,7 @@ class Read(BaseModel):
 @app.post("/reading-data")
 async def get_reading_data(data: Read):
     res = cur.execute('''SELECT * FROM shares WHERE sessionId = ?''', (data.sessionId,))
-    return { "success": True, "payload": graph_jsonld, "sessionId": res.fetchall()}
+    return { "success": True, "payload": graph_jsonld, "readingData": res.fetchall()}
 
 @app.get("/")
 async def root():
