@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 dirname = os.path.dirname(__file__)
-owl_file_path = os.path.join(dirname, 'ontology/RelAIEO_v6.owl')
+owl_file_path = os.path.join(dirname, 'ontology/RelAIEO_v7.owl')
 g = Graph()
 g.parse(owl_file_path)
 graph_jsonld = g.serialize(format='json-ld')
