@@ -54,7 +54,7 @@ async def get_reading_data(data: Read):
 @app.get("/")
 async def root():
     session_id = str(uuid.uuid4())
-    return { "success": True, "payload": graph_jsonld, "sessionId": session_id}
+    return { "success": True, "payload": graph_jsonld, "sessionId": session_id }
 
 # ----------------------------------------------------------------------------------
 
