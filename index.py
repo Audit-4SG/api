@@ -20,7 +20,7 @@ app.add_middleware(
 
 ### Read ontology and convert to JSONLD
 dirname = os.path.dirname(__file__)
-owl_file_path = os.path.join(dirname, 'ontology/RelAIEO_v7.owl')
+owl_file_path = os.path.join(dirname, 'ontology/relaieo.owl')
 g = Graph()
 g.parse(owl_file_path)
 graph_jsonld = g.serialize(format='json-ld')
