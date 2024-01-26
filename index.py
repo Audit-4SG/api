@@ -58,4 +58,4 @@ class Read(BaseModel):
 @app.post("/get-card-stack")
 async def get_card_stack(data: Read):
     res = cur.execute('''SELECT * FROM shares WHERE sessionId = ?''', (data.sessionId,))
-    return { "success": True, "payload": graph_jsonld, "readingData": res.fetchall()}
+    return { "success": True, "readingData": res.fetchall()}
