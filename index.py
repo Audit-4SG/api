@@ -30,18 +30,18 @@ con = sqlite3.connect("db.sqlite")
 cur = con.cursor()
 cur.execute("CREATE TABLE IF NOT EXISTS shares (sessionId, selectedCardIds)")
 
-### Fetch Ontology
+### Get Ontology
 @app.get("/ontology")
 async def get_ontology():
     session_id = str(uuid.uuid4())
     return { "success": True, "ontologyData": graph_jsonld, "sessionId": session_id}
 
-### Save Cards
+### Save Card Stack
 class Share(BaseModel):
     sessionId: str
     selectedCardIds: list
-@app.post("/cards")
-async def save_cards(data: Share):
+@app.post("/save-card-stack")
+async def save_card_stack(data: Share):
     res = cur.execute('''SELECT * FROM shares WHERE sessionId = ?''', (data.sessionId,))
     if len(res.fetchall()) > 0:
         cur.execute('''UPDATE shares SET selectedCardIds = ? WHERE sessionId = ?''', (json.dumps(data.selectedCardIds), data.sessionId,))
@@ -52,10 +52,10 @@ async def save_cards(data: Share):
         con.commit()
     return {"success": True}
 
-### Fetch Cards
+### Get Card Stack
 class Read(BaseModel):
     sessionId: str
-@app.get("/cards")
-async def get_cards(data: Read):
+@app.post("/get-card-stack")
+async def get_card_stack(data: Read):
     res = cur.execute('''SELECT * FROM shares WHERE sessionId = ?''', (data.sessionId,))
     return { "success": True, "payload": graph_jsonld, "readingData": res.fetchall()}
