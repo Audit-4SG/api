@@ -10,10 +10,13 @@ from rdflib import Graph
 
 ### FastAPI Setup
 app = FastAPI()
+origins = [
+    "https://app.audit4sg.org",
+    "http://localhost:3333",
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=origins,
     allow_methods=["*"],
     allow_headers=["*"]
 )
