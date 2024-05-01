@@ -7,6 +7,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from rdflib import Graph
+from dotenv import load_dotenv
+
+### Load .env file
+load_dotenv()
+CODE = os.getenv("CODE")
+
 
 ### FastAPI Setup
 app = FastAPI()
@@ -59,3 +65,12 @@ class Read(BaseModel):
 async def get_card_stack(data: Read):
     res = cur.execute('''SELECT * FROM shares WHERE sessionId = ?''', (data.sessionId,))
     return { "success": True, "readingData": res.fetchall()}
+
+### Upload Ontology
+class Upload(BaseModel):
+    code: str
+    file: str
+@app.post("/upload-ontology")
+async def upload_ontology(data: Upload):
+    if CODE != data.code:
+        return { "success": False, "message": "Invalid code"}
