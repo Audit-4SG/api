@@ -3,7 +3,7 @@ import os
 import sqlite3
 import uuid
 import json
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from rdflib import Graph
@@ -16,7 +16,6 @@ CODE = os.getenv("CODE")
 
 ### FastAPI Setup
 app = FastAPI()
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=['*'],
@@ -69,8 +68,11 @@ async def get_card_stack(data: Read):
 ### Upload Ontology
 class Upload(BaseModel):
     code: str
-    file: str
+    file: UploadFile
 @app.post("/upload-ontology")
 async def upload_ontology(data: Upload):
     if CODE != data.code:
         return { "success": False, "message": "Invalid code"}
+    if not data.file:
+        return {"success": False, "message": "File not uploaded"}
+    print(data.file.filename)
