@@ -3,11 +3,12 @@ import os
 import sqlite3
 import uuid
 import json
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, Form,  UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from rdflib import Graph
 from dotenv import load_dotenv
+from typing import Annotated
 
 ### Load .env file
 load_dotenv()
@@ -66,13 +67,15 @@ async def get_card_stack(data: Read):
     return { "success": True, "readingData": res.fetchall()}
 
 ### Upload Ontology
-class Upload(BaseModel):
-    code: str
-    file: UploadFile
 @app.post("/upload-ontology")
-async def upload_ontology(data: Upload):
-    if CODE != data.code:
-        return { "success": False, "message": "Invalid code"}
-    if not data.file:
-        return {"success": False, "message": "File not uploaded"}
-    print(data.file.filename)
+async def upload_ontology(code: Annotated[str, Form()], file: UploadFile):
+    if CODE != code:
+        return { "success": False, "message": "❌ Invalid code"}
+    if file.size <= 0:
+        return { "success": False, "message": "❌ Invalid file"}
+    file_name = "relaieo.owl"
+    file_location = f"ontology/{file_name}"
+    with open(file_location, "wb+") as file_object:
+        file_object.write(file.file.read())
+        print("✅ Ontology updated")
+        return { "success": True, "message": "✅ Ontology updated" }
